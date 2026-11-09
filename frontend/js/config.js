@@ -1,1 +1,1 @@
-window.AAHARLINK_API_URL = "http://127.0.0.1:8000/api";
+window.AAHARLINK_API_URL = "https://aaharlink-api-nx49.onrender.com/api";
