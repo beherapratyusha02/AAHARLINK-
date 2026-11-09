@@ -1,0 +1,69 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard | AaharLink</title>
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/dashboard.css">
+  
+</head>
+<body class="dashboard-page">
+<aside class="sidebar" id="sidebar">
+  <a class="logo" href="index.html">🌿 AaharLink<span>.</span></a>
+  <p class="sidebar-label">MENU</p>
+  <a class="side-link selected" href="dashboard.html">⌂ <span>Dashboard</span></a>
+  <a class="side-link" href="donate.html">＋ <span>Donate Food</span></a>
+  <a class="side-link" href="find-food.html">⌕ <span>Find Food</span></a>
+  <a class="side-link" href="about.html">♡ <span>About AaharLink</span></a>
+  <div class="sidebar-bottom">
+    <div class="sidebar-help">💚<strong>Share kindness</strong><p>Every meal makes a difference.</p></div>
+    <a class="side-link" href="index.html">↩ <span>Back to Website</span></a>
+    <button class="side-link logout-btn" id="logoutBtn">⇥ <span>Logout</span></button>
+  </div>
+</aside>
+
+<main class="dashboard-main">
+  <header class="dash-header">
+    <button id="sidebarToggle" class="menu-toggle" aria-label="Toggle sidebar">☰</button>
+    <div class="dash-search"><span>⌕</span><input id="dashboardSearch" placeholder="Search food listings..."></div>
+    <div class="profile-area"><span class="profile-icon">👤</span><div><strong id="userName">Welcome!</strong><small id="userRole">Community member</small></div></div>
+  </header>
+
+  <section class="dash-content">
+    <div class="welcome-banner">
+      <div><span class="eyebrow">YOUR AAHARLINK SPACE</span><h1 id="welcomeHeading">Hello, Friend! 🌿</h1>
+      <p>Every small action helps create a more caring community.</p>
+      <a href="donate.html" class="btn btn-light">Share Food ↗</a></div>
+      <div class="welcome-art">🥗<span>💚</span></div>
+    </div>
+
+    <div class="dash-section-heading"><div><h2>Your impact at a glance</h2><p>Keep track of your community activity.</p></div></div>
+    <div class="stats-grid">
+      <div class="stat-card"><span>🍱</span><p>Food listings</p><h2 id="totalListings">0</h2></div>
+      <div class="stat-card"><span>🤝</span><p>Meals offered</p><h2 id="totalMeals">0</h2></div>
+      <div class="stat-card"><span>📦</span><p>Food requests</p><h2 id="availableListings">0</h2></div>
+    </div>
+
+    <div class="dash-section-heading listing-heading">
+      <div><h2>Community food listings</h2><p>Discover food shared by your community.</p></div>
+      <a href="donate.html" class="btn btn-primary">+ Add Food</a>
+    </div>
+
+    <div class="filter-row">
+      <button class="filter-btn active" data-filter="All">All food</button>
+      <button class="filter-btn" data-filter="Fresh Meals">Fresh meals</button>
+      <button class="filter-btn" data-filter="Bakery">Bakery</button>
+      <button class="filter-btn" data-filter="Groceries">Groceries</button>
+    </div>
+    <p id="dashboardMessage" class="form-message" role="status"></p>
+    <div class="dashboard-food-grid" id="dashboardFoodGrid"></div>
+    <p id="emptyListings" class="empty-state" hidden>No food listings found. Try another search or add a listing.</p>
+  </section>
+</main>
+<script src="../js/config.js"></script>
+<script src="../js/api.js"></script>
+<script src="../js/dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Find Food | AaharLink</title>
+ <link rel="stylesheet" href="../css/dashboard.css">
+ 
+<link rel="stylesheet" href="../css/style.css">
+  
+</head>
+<body>
+<header class="navbar">
+  <a class="logo" href="index.html">🌿 AaharLink<span>.</span></a>
+  <button class="menu-toggle" id="menuToggle">☰</button>
+  <nav id="navLinks">
+    <a href="index.html">Home</a><a href="about.html">About</a>
+    <a class="active" href="find-food.html">Find Food</a>
+    <a href="contact.html">Contact</a><a href="faqs.html">FAQs</a>
+    <a href="login.html">Login</a>
+    <a class="btn btn-primary" href="register.html">Join Us ↗</a>
+  </nav>
+</header>
+<main>
+  <section class="section">
+    <span class="eyebrow">DISCOVER SHARED FOOD</span>
+    <h1 style="font:700 clamp(38px,5vw,60px) 'Playfair Display',serif;margin:12px 0">
+      Find food. <span>Find hope.</span>
+    </h1>
+    <p style="color:var(--muted);max-width:550px;margin-bottom:25px">
+      Explore food donations in your community and connect with donors to arrange collection.
+    </p>
+    <div class="find-controls">
+      <input id="foodSearch" type="search" placeholder="Search by food or location...">
+      <select id="foodCategory">
+        <option value="All">All categories</option>
+        <option value="Fresh Meals">Fresh meals</option>
+        <option value="Bakery">Bakery</option>
+        <option value="Groceries">Groceries</option>
+      </select>
+    </div>
+    <p id="findMessage" class="form-message" role="status"></p>
+    <div id="findFoodGrid" class="dashboard-food-grid find-grid"></div>
+    <p id="findEmpty" class="empty-state" hidden>No matching food listings found.</p>
+  </section>
+</main>
+<footer class="footer"><div class="footer-bottom">© 2026 AaharLink. Share food, spread kindness. 💚</div></footer>
+<script src="../js/config.js"></script>
+<script src="../js/api.js"></script>
+<script src="../js/main.js"></script>
+<script src="../js/find-food.js"></script>
+</body>
+</html>

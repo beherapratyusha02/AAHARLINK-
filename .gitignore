@@ -1,0 +1,36 @@
+# Windows metadata sidecar files
+*:Zone.Identifier
+
+# Python bytecode and caches
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Python virtual environments
+.venv/
+venv/
+env/
+
+# Local environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# Local databases and generated uploads
+*.db
+*.sqlite
+*.sqlite3
+/backend/python/uploads/*
+!/backend/python/uploads/README.md
+
+# Editor, operating system, and generated files
+.vscode/
+.DS_Store
+Thumbs.db
+*.log
+node_modules/
+dist/
+build/

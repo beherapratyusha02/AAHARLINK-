@@ -1,0 +1,1218 @@
+
+/* =========================================
+   AAHARLINK — GLOBAL STYLESHEET
+   Theme: Pinterest-inspired | Sage & Cream
+========================================= */
+
+/* 1. GOOGLE FONTS
+   DM Sans + Playfair Display are imported in HTML.
+========================================= */
+
+:root {
+  /* Brand Colors */
+  --green: #315c43;
+  --green-dark: #234832;
+  --green-light: #53775c;
+  --sage: #dce9d8;
+  --sage-light: #edf3e9;
+  --cream: #faf8f1;
+  --cream-dark: #f2efe5;
+  --white: #ffffff;
+
+  /* Text Colors */
+  --text: #26352b;
+  --muted: #778078;
+  --light-text: #a0a99f;
+
+  /* Accent Colors */
+  --orange: #e9a76b;
+  --peach: #f7e5d4;
+  --red: #c45d54;
+  --blue: #e8f0f5;
+
+  /* Borders and Shadows */
+  --border: #e8e9df;
+  --shadow-sm: 0 4px 15px rgba(39, 67, 46, 0.05);
+  --shadow: 0 12px 35px rgba(39, 67, 46, 0.09);
+  --shadow-lg: 0 20px 55px rgba(39, 67, 46, 0.13);
+
+  /* Layout */
+  --container: 1200px;
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --transition: 0.25s ease;
+}
+
+/* 2. RESET */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "DM Sans", sans-serif;
+  background: var(--cream);
+  color: var(--text);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text);
+  line-height: 1.25;
+}
+
+p {
+  line-height: 1.7;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+::selection {
+  background: var(--sage);
+  color: var(--green-dark);
+}
+
+/* 3. SCROLLBAR */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--cream);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #b7cbb6;
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--green-light);
+}
+
+/* 4. NAVIGATION BAR */
+
+.navbar {
+  width: 100%;
+  min-height: 82px;
+  padding: 12px 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(250, 248, 241, 0.97);
+  border-bottom: 1px solid rgba(49, 92, 67, 0.08);
+  backdrop-filter: blur(12px);
+}
+
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  flex-shrink: 0;
+  color: var(--green);
+  font-family: "Playfair Display", serif;
+  font-size: 27px;
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+.logo span {
+  color: var(--orange);
+}
+
+.navbar nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 25px;
+}
+
+.navbar nav a {
+  color: var(--text);
+  font-size: 13px;
+  font-weight: 600;
+  transition: color var(--transition);
+  white-space: nowrap;
+}
+
+.navbar nav a:hover,
+.navbar nav a.active {
+  color: var(--green);
+}
+
+.navbar nav a.active:not(.btn) {
+  position: relative;
+}
+
+.navbar nav a.active:not(.btn)::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 18px;
+  bottom: -8px;
+  left: 0;
+  background: var(--orange);
+  border-radius: 5px;
+}
+
+.navbar nav .nav-login {
+  margin-left: 3px;
+}
+
+.menu-toggle {
+  display: none;
+  border: 0;
+  background: transparent;
+  color: var(--green);
+  font-size: 25px;
+  line-height: 1;
+}
+
+/* 5. BUTTONS */
+
+.btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  min-height: 45px;
+  padding: 12px 23px;
+  border: 1px solid transparent;
+  border-radius: var(--radius-sm);
+  font-size: 13px;
+  font-weight: 700;
+  text-align: center;
+  cursor: pointer;
+  transition:
+    background var(--transition),
+    color var(--transition),
+    transform var(--transition),
+    box-shadow var(--transition);
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn:focus-visible,
+button:focus-visible,
+a:focus-visible {
+  outline: 3px solid var(--orange);
+  outline-offset: 3px;
+}
+
+.btn-primary {
+  background: var(--green);
+  color: var(--white);
+  box-shadow: 0 5px 14px rgba(49, 92, 67, 0.12);
+}
+
+.btn-primary:hover {
+  background: var(--green-dark);
+  color: var(--white);
+  box-shadow: var(--shadow);
+}
+
+.btn-outline {
+  color: var(--green);
+  background: transparent;
+  border-color: var(--green);
+}
+
+.btn-outline:hover {
+  background: var(--sage);
+}
+
+.btn-light {
+  color: var(--green);
+  background: var(--white);
+}
+
+.btn-light:hover {
+  background: var(--sage-light);
+}
+
+.btn-danger {
+  color: var(--white);
+  background: var(--red);
+}
+
+.nav-register {
+  min-height: 39px;
+  padding: 9px 17px;
+}
+
+/* 6. COMMON TEXT STYLES */
+
+.eyebrow {
+  display: inline-block;
+  color: var(--green);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  line-height: 1.6;
+}
+
+.text-muted {
+  color: var(--muted);
+}
+
+.text-link {
+  color: var(--green);
+  font-size: 13px;
+  font-weight: 700;
+  transition: color var(--transition);
+}
+
+.text-link:hover {
+  color: var(--orange);
+}
+
+h2 span,
+h1 span {
+  color: var(--green);
+  font-style: italic;
+}
+
+/* 7. HERO SECTION */
+
+.hero {
+  width: 100%;
+  min-height: 590px;
+  padding: 75px 8% 85px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 65px;
+  max-width: 1600px;
+  margin: auto;
+}
+
+.hero-content {
+  max-width: 570px;
+}
+
+.hero h1 {
+  margin: 20px 0;
+  color: var(--text);
+  font-family: "Playfair Display", serif;
+  font-size: clamp(48px, 6vw, 76px);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -2px;
+}
+
+.hero-content > p {
+  max-width: 460px;
+  margin-bottom: 27px;
+  color: var(--muted);
+  font-size: 15px;
+}
+
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.hero-note {
+  margin-top: 26px;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.hero-note span {
+  color: #c47c57;
+  font-size: 19px;
+}
+
+.hero-image {
+  position: relative;
+  padding: 0 0 25px 20px;
+}
+
+.hero-image::before {
+  content: "";
+  position: absolute;
+  inset: 20px -15px 0 40px;
+  z-index: 0;
+  background: var(--sage);
+  border-radius: 45% 45% 20px 20px;
+  transform: rotate(3deg);
+}
+
+.hero-image > img {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 410px;
+  object-fit: cover;
+  border-radius: 48% 48% 18px 18px;
+  box-shadow: var(--shadow);
+}
+
+.floating-card {
+  position: absolute;
+  left: -25px;
+  bottom: 60px;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 19px;
+  background: var(--white);
+  border-radius: 14px;
+  box-shadow: var(--shadow);
+}
+
+.floating-icon {
+  font-size: 29px;
+}
+
+.floating-card strong,
+.floating-card small {
+  display: block;
+}
+
+.floating-card strong {
+  color: var(--text);
+  font-size: 13px;
+}
+
+.floating-card small {
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.image-label {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  padding: 8px 15px;
+  background: var(--green);
+  color: var(--white);
+  border-radius: var(--radius-sm);
+  font-size: 11px;
+}
+
+/* 8. COMMON SECTIONS */
+
+.section {
+  padding: 75px 8%;
+}
+
+.impact-heading {
+  max-width: 650px;
+  margin: 0 auto 38px;
+  text-align: center;
+}
+
+.impact-heading h2,
+.section-heading h2 {
+  margin: 10px 0 12px;
+  font-family: "Playfair Display", serif;
+  font-size: clamp(30px, 4vw, 43px);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.impact-heading p {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+/* 9. IMPACT STATISTICS */
+
+.impact {
+  background: #f0f3e9;
+  text-align: center;
+}
+
+.impact-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.impact-card {
+  padding: 25px 10px;
+  background: var(--white);
+  border: 1px solid rgba(49, 92, 67, 0.04);
+  border-radius: 15px;
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.impact-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow);
+}
+
+.impact-card > span {
+  font-size: 30px;
+}
+
+.impact-card h3 {
+  margin: 9px 0 2px;
+  color: var(--green);
+  font-family: "Playfair Display", serif;
+  font-size: 29px;
+}
+
+.impact-card p {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.demo-note {
+  display: block;
+  margin-top: 16px;
+  color: var(--muted);
+  font-size: 10px;
+}
+
+/* 10. FOOD CATEGORY SECTION */
+
+.food-section {
+  background: var(--cream);
+}
+
+.section-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.food-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 23px;
+}
+
+.food-card {
+  overflow: hidden;
+  background: var(--white);
+  border: 1px solid rgba(49, 92, 67, 0.05);
+  border-radius: 15px;
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.food-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow);
+}
+
+.food-card img {
+  width: 100%;
+  height: 225px;
+  object-fit: cover;
+}
+
+.food-card-body {
+  padding: 20px;
+}
+
+.food-tag {
+  display: inline-block;
+  padding: 5px 10px;
+  background: var(--sage-light);
+  color: var(--green);
+  border-radius: 20px;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.food-card h3 {
+  margin: 10px 0 5px;
+  font-family: "Playfair Display", serif;
+  font-size: 21px;
+}
+
+.food-card p {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+/* 11. HOW IT WORKS */
+
+.how-section {
+  background: #f5f1e7;
+}
+
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.step-card {
+  position: relative;
+  padding: 28px;
+  background: #fffdf8;
+  border: 1px solid #e9e4d6;
+  border-radius: 15px;
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.step-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow);
+}
+
+.step-number {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  color: #e2e8db;
+  font-family: "Playfair Display", serif;
+  font-size: 38px;
+  font-weight: 700;
+}
+
+.step-icon {
+  display: block;
+  margin: 14px 0;
+  font-size: 34px;
+}
+
+.step-card h3 {
+  margin-bottom: 8px;
+  font-family: "Playfair Display", serif;
+  font-size: 21px;
+}
+
+.step-card p {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+/* 12. CALL TO ACTION */
+
+.cta-section {
+  margin: 65px 8%;
+  padding: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+  color: var(--white);
+  background: var(--green);
+  border-radius: 20px;
+  box-shadow: var(--shadow);
+}
+
+.cta-section .eyebrow {
+  color: #d9e7cf;
+}
+
+.cta-section h2 {
+  margin: 12px 0;
+  color: var(--white);
+  font-family: "Playfair Display", serif;
+  font-size: clamp(30px, 4vw, 42px);
+  line-height: 1.2;
+}
+
+.cta-section p {
+  color: #e0e9df;
+  font-size: 13px;
+}
+
+/* 13. ABOUT PAGE */
+
+.about-hero {
+  padding: 80px 8%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 50px;
+}
+
+.about-hero h1 {
+  margin: 15px 0;
+  font: 800 clamp(40px, 5vw, 64px)/1.15 "Playfair Display", serif;
+}
+
+.about-hero p {
+  margin-bottom: 20px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.about-hero img {
+  width: 100%;
+  height: 390px;
+  object-fit: cover;
+  border-radius: 20px 70px 20px 70px;
+  box-shadow: var(--shadow);
+}
+
+/* 14. CONTACT PAGE */
+
+.contact-layout {
+  max-width: 950px;
+  margin: 35px auto;
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  overflow: hidden;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+}
+
+.contact-info {
+  padding: 40px 30px;
+  background: #eaf0e3;
+}
+
+.contact-info h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 27px;
+}
+
+.contact-info > p {
+  margin: 12px 0 30px;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.contact-detail {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin: 20px 0;
+}
+
+.contact-detail strong {
+  font-size: 12px;
+}
+
+.contact-detail span {
+  font-size: 12px;
+}
+
+/* 15. CONTACT FORM */
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 35px;
+}
+
+.contact-form label {
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  outline: none;
+  background: #fff;
+  color: var(--text);
+  font-size: 13px;
+}
+
+.contact-form textarea {
+  resize: vertical;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: var(--green);
+  box-shadow: 0 0 0 3px rgba(49, 92, 67, 0.08);
+}
+
+/* 16. FAQ PAGE */
+
+.faq-list {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.faq-list details {
+  margin-bottom: 12px;
+  padding: 18px 20px;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 11px;
+  transition: border-color var(--transition);
+}
+
+.faq-list details[open] {
+  border-color: #b9cdb8;
+}
+
+.faq-list summary {
+  position: relative;
+  color: var(--text);
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  list-style: none;
+  padding-right: 25px;
+}
+
+.faq-list summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-list summary::after {
+  content: "+";
+  position: absolute;
+  right: 0;
+  top: -4px;
+  color: var(--green);
+  font-size: 22px;
+  font-weight: 400;
+}
+
+.faq-list details[open] summary::after {
+  content: "−";
+}
+
+.faq-list details[open] summary {
+  color: var(--green);
+}
+
+.faq-list details p {
+  margin-top: 12px;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.faq-contact {
+  max-width: 800px;
+  margin: 30px auto 0;
+  padding: 35px;
+  background: #eaf0e3;
+  border-radius: 15px;
+  text-align: center;
+}
+
+.faq-contact h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 24px;
+}
+
+.faq-contact p {
+  margin: 8px 0 18px;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+/* 17. FIND FOOD PAGE */
+
+.find-controls {
+  max-width: 750px;
+  margin: 25px 0 30px;
+  display: flex;
+  gap: 12px;
+}
+
+.find-controls input,
+.find-controls select {
+  min-width: 0;
+  padding: 13px 15px;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 9px;
+  outline: none;
+  color: var(--text);
+  font-size: 12px;
+}
+
+.find-controls input {
+  flex: 1;
+}
+
+.find-controls select {
+  width: 190px;
+}
+
+.find-controls input:focus,
+.find-controls select:focus {
+  border-color: var(--green);
+}
+
+/* 18. FOOTER */
+
+.footer {
+  padding: 50px 8% 18px;
+  background: #203e2e;
+  color: #edf2e9;
+}
+
+.footer-main {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 50px;
+  padding-bottom: 35px;
+}
+
+.footer-logo {
+  color: var(--white);
+}
+
+.footer-main p {
+  max-width: 330px;
+  margin-top: 12px;
+  color: #c0cdbf;
+  font-size: 12px;
+}
+
+.footer-main h4 {
+  margin-bottom: 13px;
+  color: var(--white);
+  font-size: 13px;
+}
+
+.footer-main > div > a:not(.logo) {
+  display: block;
+  margin: 8px 0;
+  color: #c0cdbf;
+  font-size: 12px;
+  transition: color var(--transition);
+}
+
+.footer-main > div > a:hover {
+  color: var(--white);
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  padding-top: 17px;
+  border-top: 1px solid #42604d;
+  color: #b7c7b8;
+  font-size: 10px;
+}
+
+/* 19. SHARED EMPTY AND STATUS STATES */
+
+.empty-state {
+  padding: 40px 10px;
+  color: var(--muted);
+  text-align: center;
+  font-size: 13px;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+/* 20. RESPONSIVE DESIGN */
+
+@media (max-width: 1100px) {
+  .navbar {
+    padding-right: 5%;
+    padding-left: 5%;
+  }
+
+  .navbar nav {
+    gap: 15px;
+  }
+
+  .hero {
+    padding-right: 6%;
+    padding-left: 6%;
+    gap: 35px;
+  }
+
+  .section {
+    padding-right: 6%;
+    padding-left: 6%;
+  }
+
+  .footer {
+    padding-right: 6%;
+    padding-left: 6%;
+  }
+}
+
+@media (max-width: 850px) {
+  .navbar nav {
+    gap: 11px;
+  }
+
+  .navbar nav a {
+    font-size: 11px;
+  }
+
+  .logo {
+    font-size: 23px;
+  }
+
+  .hero {
+    min-height: 520px;
+    gap: 25px;
+  }
+
+  .hero h1 {
+    font-size: 53px;
+  }
+
+  .hero-image > img {
+    height: 350px;
+  }
+
+  .impact-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .food-grid {
+    gap: 15px;
+  }
+
+  .food-card img {
+    height: 185px;
+  }
+
+  .steps-grid {
+    gap: 14px;
+  }
+
+  .step-card {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 700px) {
+  .navbar {
+    min-height: 70px;
+    padding: 10px 5%;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .navbar nav {
+    display: none;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    padding: 22px 7%;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 14px;
+    background: var(--cream);
+    box-shadow: var(--shadow);
+    border-top: 1px solid var(--border);
+  }
+
+  .navbar nav.open {
+    display: flex;
+  }
+
+  .navbar nav a {
+    padding: 5px 0;
+    font-size: 13px;
+  }
+
+  .navbar nav a.active:not(.btn)::after {
+    display: none;
+  }
+
+  .navbar nav .btn {
+    align-self: flex-start;
+    padding: 10px 18px;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    padding: 45px 6% 55px;
+    gap: 35px;
+  }
+
+  .hero h1 {
+    font-size: clamp(44px, 11vw, 62px);
+  }
+
+  .hero-content > p {
+    font-size: 13px;
+  }
+
+  .hero-image {
+    margin: 0 12px;
+    padding-left: 10px;
+  }
+
+  .hero-image > img {
+    height: 330px;
+  }
+
+  .floating-card {
+    left: -8px;
+    bottom: 45px;
+  }
+
+  .section {
+    padding: 55px 6%;
+  }
+
+  .impact-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .impact-card {
+    padding: 20px 8px;
+  }
+
+  .impact-card h3 {
+    font-size: 25px;
+  }
+
+  .food-grid,
+  .steps-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .food-card img {
+    height: 230px;
+  }
+
+  .section-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .cta-section {
+    margin: 40px 5%;
+    padding: 35px 25px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer {
+    padding: 40px 6% 18px;
+  }
+
+  .footer-main {
+    grid-template-columns: 1fr 1fr;
+    gap: 28px;
+  }
+
+  .footer-main > div:first-child {
+    grid-column: 1 / -1;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+  }
+
+  .contact-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-info {
+    padding: 30px;
+  }
+
+  .contact-form {
+    padding: 25px;
+  }
+
+  .find-controls {
+    flex-direction: column;
+  }
+
+  .find-controls select {
+    width: 100%;
+  }
+
+  .about-hero {
+    grid-template-columns: 1fr;
+    padding: 55px 6%;
+  }
+
+  .about-hero img {
+    height: 300px;
+  }
+}
+
+@media (max-width: 380px) {
+  .logo {
+    font-size: 22px;
+  }
+
+  .hero h1 {
+    font-size: 42px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .impact-card h3 {
+    font-size: 22px;
+  }
+
+  .footer-main {
+    gap: 20px;
+  }
+}
+
+/* 21. REDUCED MOTION ACCESSIBILITY */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+

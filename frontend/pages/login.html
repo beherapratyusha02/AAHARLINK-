@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Login | AaharLink</title>
+  
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/auth.css">
+  
+</head>
+<body class="auth-page">
+<a class="logo auth-logo" href="index.html">🌿 AaharLink<span>.</span></a>
+<main class="auth-layout">
+  <div class="auth-art">
+    <span class="eyebrow">WELCOME BACK</span>
+    <h1>Every connection<br><span>starts with kindness.</span></h1>
+    <p>Continue your journey towards a community with less food waste.</p>
+    <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=900" alt="Fresh food">
+  </div>
+  <div class="auth-form-wrap">
+    <a class="back-link" href="index.html">← Back to home</a>
+    <h2>Welcome back!</h2>
+    <p class="form-subtitle">Login to your AaharLink account.</p>
+    <form id="loginForm">
+      <label for="email">Email address</label>
+      <input id="email" type="email" placeholder="you@example.com" required>
+      <label for="password">Password</label>
+      <input id="password" type="password" placeholder="Enter your password" required>
+      <button class="btn btn-primary form-submit" type="submit">Login ↗</button>
+      <p id="loginMessage" class="form-message" role="status"></p>
+    </form>
+    <p class="auth-switch">New to AaharLink? <a href="register.html">Create an account</a></p>
+    <p class="demo-note">Sign in with the account registered on the AaharLink API.</p>
+  </div>
+</main>
+<script src="../js/config.js"></script>
+<script src="../js/api.js"></script>
+<script src="../js/auth.js"></script>
+</body>
+</html>

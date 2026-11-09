@@ -1,0 +1,142 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate Food | AaharLink</title>
+
+    <!-- CSS files -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/auth.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
+</head>
+
+<body class="auth-page">
+
+    <a class="logo auth-logo" href="index.html">
+        🌿 AaharLink<span>.</span>
+    </a>
+
+    <main class="auth-layout">
+
+        <!-- Left side: Donation information -->
+        <section class="auth-art">
+            <span class="eyebrow">SHARE WHAT YOU CAN</span>
+
+            <h1>
+                Your extra food can make
+                <span>someone's day.</span>
+            </h1>
+
+            <p>
+                Post details of safe surplus food so that interested
+                people can connect with you.
+            </p>
+
+            <img
+                src="https://images.unsplash.com/photo-1547592180-85f173990554?w=900"
+                alt="Food ready to share"
+            >
+        </section>
+
+        <!-- Right side: Donation form -->
+        <section class="auth-form-wrap">
+
+            <a href="dashboard.html" class="back-link">
+                ← Back to dashboard
+            </a>
+
+            <h2>Donate food</h2>
+
+            <p class="form-subtitle">
+                Add the details of your food donation.
+            </p>
+
+            <form id="donateForm">
+
+                <label for="foodTitle">Food name</label>
+                <input
+                    id="foodTitle"
+                    name="foodTitle"
+                    type="text"
+                    required
+                    placeholder="e.g. Fresh vegetable meals"
+                >
+
+                <label for="category">Food category</label>
+                <select id="category" name="category" required>
+                    <option value="">Select category</option>
+                    <option value="Fresh Meals">Fresh Meals</option>
+                    <option value="Bakery">Bakery</option>
+                    <option value="Groceries">Groceries</option>
+                </select>
+
+                <label for="quantity">Quantity (meals/items)</label>
+                <input
+                    id="quantity"
+                    name="quantity"
+                    type="number"
+                    min="1"
+                    required
+                    placeholder="e.g. 10"
+                >
+
+                <label for="location">Pickup location</label>
+                <input
+                    id="location"
+                    name="location"
+                    type="text"
+                    required
+                    placeholder="Area, city"
+                >
+
+                <label for="expiry">Best before / pickup deadline</label>
+                <input
+                    id="expiry"
+                    name="expiry"
+                    type="datetime-local"
+                    required
+                >
+
+                <label for="description">Food description</label>
+                <textarea
+                    id="description"
+                    name="description"
+                    rows="3"
+                    placeholder="Ingredients, storage details, etc."
+                ></textarea>
+
+                <label for="foodImage">Image URL (optional)</label>
+                <input
+                    id="foodImage"
+                    name="foodImage"
+                    type="url"
+                    placeholder="https://example.com/food.jpg"
+                >
+
+                <button
+                    class="btn btn-primary form-submit"
+                    type="submit"
+                >
+                    Publish Donation ↗
+                </button>
+
+                <p
+                    id="donateMessage"
+                    class="form-message"
+                    role="status"
+                ></p>
+
+            </form>
+        </section>
+
+    </main>
+
+    <!-- JavaScript file -->
+    <script src="../js/config.js"></script>
+    <script src="../js/api.js"></script>
+    <script src="../js/donate.js"></script>
+
+</body>
+</html>
