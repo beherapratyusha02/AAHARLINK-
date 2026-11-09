@@ -35,7 +35,23 @@
   }
 
   function getCurrentUser() {
-    return JSON.parse(sessionStorage.getItem("aaharCurrentUser") || "null");
+    const savedUser = sessionStorage.getItem("aaharCurrentUser");
+    if (!savedUser) return null;
+
+    try {
+      const user = JSON.parse(savedUser);
+      if (user && typeof user === "object" && user.id) return user;
+    } catch {
+      sessionStorage.removeItem("aaharCurrentUser");
+      return null;
+    }
+
+    sessionStorage.removeItem("aaharCurrentUser");
+    return null;
+  }
+
+  function logout() {
+    sessionStorage.removeItem("aaharCurrentUser");
   }
 
   function escapeHtml(value) {
@@ -48,5 +64,5 @@
     })[character]);
   }
 
-  window.AaharLink = { apiRequest, getCurrentUser, escapeHtml };
+  window.AaharLink = { apiRequest, getCurrentUser, logout, escapeHtml };
 })();

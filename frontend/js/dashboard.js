@@ -102,8 +102,8 @@ if (!currentUser?.id) {
   );
 
   document.getElementById("logoutBtn").addEventListener("click", () => {
-    sessionStorage.removeItem("aaharCurrentUser");
-    window.location.href = "login.html";
+    window.AaharLink.logout();
+    window.location.href = "index.html";
   });
 
   document.getElementById("sidebarToggle").addEventListener("click", () => {

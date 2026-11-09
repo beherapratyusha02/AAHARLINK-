@@ -2,6 +2,10 @@
 const donateForm = document.getElementById("donateForm");
 const { apiRequest, getCurrentUser } = window.AaharLink;
 
+if (!getCurrentUser()?.id) {
+  window.location.href = "login.html";
+}
+
 donateForm.addEventListener("submit", async event => {
   event.preventDefault();
 

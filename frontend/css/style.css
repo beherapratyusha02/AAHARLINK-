@@ -165,7 +165,8 @@ ul {
   gap: 25px;
 }
 
-.navbar nav a {
+.navbar nav a,
+.navbar nav button {
   color: var(--text);
   font-size: 13px;
   font-weight: 600;
@@ -176,6 +177,11 @@ ul {
 .navbar nav a:hover,
 .navbar nav a.active {
   color: var(--green);
+}
+
+.navbar nav button.btn-primary,
+.navbar nav button.btn-primary:hover {
+  color: var(--white);
 }
 
 .navbar nav a.active:not(.btn) {
@@ -983,7 +989,8 @@ h1 span {
     gap: 11px;
   }
 
-  .navbar nav a {
+  .navbar nav a,
+  .navbar nav button {
     font-size: 11px;
   }
 
@@ -1054,7 +1061,8 @@ h1 span {
     display: flex;
   }
 
-  .navbar nav a {
+  .navbar nav a,
+  .navbar nav button {
     padding: 5px 0;
     font-size: 13px;
   }

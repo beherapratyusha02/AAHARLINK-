@@ -3,6 +3,10 @@ const registerForm = document.getElementById("registerForm");
 const loginForm = document.getElementById("loginForm");
 const { apiRequest } = window.AaharLink;
 
+if (window.AaharLink.getCurrentUser()) {
+  window.location.replace("dashboard.html");
+}
+
 if (registerForm) {
   registerForm.addEventListener("submit", async event => {
     event.preventDefault();
