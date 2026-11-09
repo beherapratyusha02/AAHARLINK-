@@ -66,7 +66,7 @@ if (loginForm) {
         method: "POST",
         body: JSON.stringify({ email, password })
       });
-      sessionStorage.setItem("aaharCurrentUser", JSON.stringify(user));
+      localStorage.setItem("aaharCurrentUser", JSON.stringify(user));
       window.location.href = "dashboard.html";
     } catch (error) {
       message.textContent = error.message;

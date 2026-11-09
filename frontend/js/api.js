@@ -35,22 +35,30 @@
   }
 
   function getCurrentUser() {
-    const savedUser = sessionStorage.getItem("aaharCurrentUser");
+    const savedUser = localStorage.getItem("aaharCurrentUser") ||
+      sessionStorage.getItem("aaharCurrentUser");
     if (!savedUser) return null;
 
     try {
       const user = JSON.parse(savedUser);
-      if (user && typeof user === "object" && user.id) return user;
+      if (user && typeof user === "object" && user.id) {
+        localStorage.setItem("aaharCurrentUser", JSON.stringify(user));
+        sessionStorage.removeItem("aaharCurrentUser");
+        return user;
+      }
     } catch {
+      localStorage.removeItem("aaharCurrentUser");
       sessionStorage.removeItem("aaharCurrentUser");
       return null;
     }
 
+    localStorage.removeItem("aaharCurrentUser");
     sessionStorage.removeItem("aaharCurrentUser");
     return null;
   }
 
   function logout() {
+    localStorage.removeItem("aaharCurrentUser");
     sessionStorage.removeItem("aaharCurrentUser");
   }
 

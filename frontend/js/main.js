@@ -5,6 +5,10 @@ const navLinks = document.getElementById("navLinks");
 if (navLinks) {
   const currentUser = window.AaharLink.getCurrentUser();
   if (currentUser) {
+    if (/\/pages\/(?:index\.html)?$/.test(window.location.pathname)) {
+      window.location.replace("dashboard.html");
+    }
+
     document.querySelectorAll('a[href="login.html"]').forEach(link => {
       link.href = "dashboard.html";
       link.textContent = "Dashboard";
