@@ -8,7 +8,7 @@
 
 .dashboard-page {
   min-height: 100vh;
-  background: #f5f6f0;
+  background: #f3f7fc;
 }
 
 .dashboard-page h1,
@@ -42,7 +42,7 @@
 
 .sidebar-label {
   margin: 38px 12px 12px;
-  color: #9ba49a;
+  color: #8a9bad;
   font-size: 10px;
   font-weight: 800;
   letter-spacing: 2px;
@@ -60,7 +60,7 @@
   border: 0;
   border-radius: 9px;
   background: transparent;
-  color: #68756a;
+  color: #5e7185;
   font-family: "DM Sans", sans-serif;
   font-size: 12px;
   font-weight: 500;
@@ -79,7 +79,7 @@
 }
 
 .side-link.selected {
-  background: #eaf1e7;
+  background: #e6f0fa;
   color: var(--green);
   font-weight: 700;
 }
@@ -98,9 +98,9 @@
 .sidebar-help {
   margin-bottom: 15px;
   padding: 15px;
-  border: 1px solid #e5ecdf;
+  border: 1px solid #dce8f4;
   border-radius: 12px;
-  background: #f0f4eb;
+  background: #eef5fc;
   color: var(--green);
   font-size: 21px;
 }
@@ -164,14 +164,14 @@
   gap: 10px;
   width: min(360px, 50%);
   padding: 10px 14px;
-  background: #f5f6f1;
+  background: #f2f6fb;
   border: 1px solid transparent;
   border-radius: 9px;
   transition: border-color var(--transition);
 }
 
 .dash-search:focus-within {
-  border-color: #b8cdb7;
+  border-color: #b7cde3;
 }
 
 .dash-search span {
@@ -190,7 +190,7 @@
 }
 
 .dash-search input::placeholder {
-  color: #9ba49a;
+  color: #8a9bad;
 }
 
 /* 8. USER PROFILE */
@@ -250,8 +250,8 @@
   min-height: 205px;
   padding: 30px 35px;
   overflow: hidden;
-  background: #dce9d8;
-  border: 1px solid rgba(49, 92, 67, 0.06);
+  background: #dceafb;
+  border: 1px solid rgba(37, 99, 166, 0.07);
   border-radius: 16px;
 }
 
@@ -262,7 +262,7 @@
   right: 100px;
   width: 230px;
   height: 230px;
-  border: 1px solid rgba(49, 92, 67, 0.1);
+  border: 1px solid rgba(37, 99, 166, 0.1);
   border-radius: 50%;
   pointer-events: none;
 }
@@ -282,7 +282,7 @@
 
 .welcome-banner p {
   margin-bottom: 18px;
-  color: #657666;
+  color: #5e7185;
   font-size: 11px;
 }
 
@@ -345,7 +345,7 @@
   padding: 20px;
   overflow: hidden;
   background: var(--white);
-  border: 1px solid #edf0e9;
+  border: 1px solid #e5ecf4;
   border-radius: 13px;
   box-shadow: var(--shadow-sm);
   transition:
@@ -404,7 +404,7 @@
   border: 1px solid var(--border);
   border-radius: 30px;
   background: var(--white);
-  color: #68756a;
+  color: #5e7185;
   font-family: "DM Sans", sans-serif;
   font-size: 10px;
   font-weight: 600;
@@ -440,7 +440,7 @@
   min-width: 0;
   overflow: hidden;
   background: var(--white);
-  border: 1px solid rgba(49, 92, 67, 0.06);
+  border: 1px solid rgba(37, 99, 166, 0.07);
   border-radius: 13px;
   box-shadow: var(--shadow-sm);
   transition:
@@ -514,7 +514,7 @@
   display: inline-block;
   padding: 4px 8px;
   border-radius: 20px;
-  background: #e7f2e4;
+  background: #e6f2fd;
   color: var(--green);
   font-size: 9px;
   font-weight: 700;
@@ -606,7 +606,7 @@
 .find-controls input:focus,
 .find-controls select:focus {
   border-color: var(--green);
-  box-shadow: 0 0 0 3px rgba(49, 92, 67, 0.08);
+  box-shadow: 0 0 0 3px rgba(37, 99, 166, 0.1);
 }
 
 .find-grid {
@@ -618,7 +618,7 @@
 .donation-page {
   min-height: 100vh;
   padding: 25px;
-  background: #f5f4ed;
+  background: #f3f7fc;
 }
 
 .donation-container {
@@ -687,7 +687,7 @@
 .donation-form select:focus,
 .donation-form textarea:focus {
   border-color: var(--green);
-  box-shadow: 0 0 0 3px rgba(49, 92, 67, 0.08);
+  box-shadow: 0 0 0 3px rgba(37, 99, 166, 0.1);
 }
 
 .donation-form button {

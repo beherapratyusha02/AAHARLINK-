@@ -1,7 +1,7 @@
 
 /* =========================================
    AAHARLINK — GLOBAL STYLESHEET
-   Theme: Pinterest-inspired | Sage & Cream
+   Theme: Blue & White
 ========================================= */
 
 /* 1. GOOGLE FONTS
@@ -10,19 +10,19 @@
 
 :root {
   /* Brand Colors */
-  --green: #315c43;
-  --green-dark: #234832;
-  --green-light: #53775c;
-  --sage: #dce9d8;
-  --sage-light: #edf3e9;
-  --cream: #faf8f1;
-  --cream-dark: #f2efe5;
+  --green: #2563a6;
+  --green-dark: #174775;
+  --green-light: #4784bd;
+  --sage: #dceafb;
+  --sage-light: #edf5fd;
+  --cream: #f7faff;
+  --cream-dark: #eaf2fa;
   --white: #ffffff;
 
   /* Text Colors */
-  --text: #26352b;
-  --muted: #778078;
-  --light-text: #a0a99f;
+  --text: #243447;
+  --muted: #718096;
+  --light-text: #9aa9b8;
 
   /* Accent Colors */
   --orange: #e9a76b;
@@ -31,10 +31,10 @@
   --blue: #e8f0f5;
 
   /* Borders and Shadows */
-  --border: #e8e9df;
-  --shadow-sm: 0 4px 15px rgba(39, 67, 46, 0.05);
-  --shadow: 0 12px 35px rgba(39, 67, 46, 0.09);
-  --shadow-lg: 0 20px 55px rgba(39, 67, 46, 0.13);
+  --border: #dfe7ef;
+  --shadow-sm: 0 4px 15px rgba(36, 67, 102, 0.06);
+  --shadow: 0 12px 35px rgba(36, 67, 102, 0.1);
+  --shadow-lg: 0 20px 55px rgba(36, 67, 102, 0.14);
 
   /* Layout */
   --container: 1200px;
@@ -116,7 +116,7 @@ ul {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #b7cbb6;
+  background: #b6cce2;
   border-radius: 20px;
 }
 
@@ -137,8 +137,8 @@ ul {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(250, 248, 241, 0.97);
-  border-bottom: 1px solid rgba(49, 92, 67, 0.08);
+  background: rgba(247, 250, 255, 0.97);
+  border-bottom: 1px solid rgba(37, 99, 166, 0.1);
   backdrop-filter: blur(12px);
 }
 
@@ -242,7 +242,7 @@ a:focus-visible {
 .btn-primary {
   background: var(--green);
   color: var(--white);
-  box-shadow: 0 5px 14px rgba(49, 92, 67, 0.12);
+  box-shadow: 0 5px 14px rgba(37, 99, 166, 0.14);
 }
 
 .btn-primary:hover {
@@ -463,7 +463,7 @@ h1 span {
 /* 9. IMPACT STATISTICS */
 
 .impact {
-  background: #f0f3e9;
+  background: #edf4fb;
   text-align: center;
 }
 
@@ -476,7 +476,7 @@ h1 span {
 .impact-card {
   padding: 25px 10px;
   background: var(--white);
-  border: 1px solid rgba(49, 92, 67, 0.04);
+  border: 1px solid rgba(37, 99, 166, 0.05);
   border-radius: 15px;
   box-shadow: var(--shadow-sm);
   transition: transform var(--transition), box-shadow var(--transition);
@@ -533,7 +533,7 @@ h1 span {
 .food-card {
   overflow: hidden;
   background: var(--white);
-  border: 1px solid rgba(49, 92, 67, 0.05);
+  border: 1px solid rgba(37, 99, 166, 0.06);
   border-radius: 15px;
   box-shadow: var(--shadow-sm);
   transition: transform var(--transition), box-shadow var(--transition);
@@ -578,7 +578,7 @@ h1 span {
 /* 11. HOW IT WORKS */
 
 .how-section {
-  background: #f5f1e7;
+  background: #f0f5fb;
 }
 
 .steps-grid {
@@ -590,8 +590,8 @@ h1 span {
 .step-card {
   position: relative;
   padding: 28px;
-  background: #fffdf8;
-  border: 1px solid #e9e4d6;
+  background: #fbfdff;
+  border: 1px solid #e1eaf4;
   border-radius: 15px;
   transition: transform var(--transition), box-shadow var(--transition);
 }
@@ -605,7 +605,7 @@ h1 span {
   position: absolute;
   top: 15px;
   right: 20px;
-  color: #e2e8db;
+  color: #dce8f5;
   font-family: "Playfair Display", serif;
   font-size: 38px;
   font-weight: 700;
@@ -644,7 +644,7 @@ h1 span {
 }
 
 .cta-section .eyebrow {
-  color: #d9e7cf;
+  color: #d9e8f7;
 }
 
 .cta-section h2 {
@@ -656,7 +656,7 @@ h1 span {
 }
 
 .cta-section p {
-  color: #e0e9df;
+  color: #e0ebf7;
   font-size: 13px;
 }
 
@@ -705,7 +705,7 @@ h1 span {
 
 .contact-info {
   padding: 40px 30px;
-  background: #eaf0e3;
+  background: #eaf2fa;
 }
 
 .contact-info h2 {
@@ -767,7 +767,7 @@ h1 span {
 .contact-form input:focus,
 .contact-form textarea:focus {
   border-color: var(--green);
-  box-shadow: 0 0 0 3px rgba(49, 92, 67, 0.08);
+  box-shadow: 0 0 0 3px rgba(37, 99, 166, 0.1);
 }
 
 /* 16. FAQ PAGE */
@@ -787,7 +787,7 @@ h1 span {
 }
 
 .faq-list details[open] {
-  border-color: #b9cdb8;
+  border-color: #b7cde3;
 }
 
 .faq-list summary {
@@ -832,7 +832,7 @@ h1 span {
   max-width: 800px;
   margin: 30px auto 0;
   padding: 35px;
-  background: #eaf0e3;
+  background: #eaf2fa;
   border-radius: 15px;
   text-align: center;
 }
@@ -886,8 +886,8 @@ h1 span {
 
 .footer {
   padding: 50px 8% 18px;
-  background: #203e2e;
-  color: #edf2e9;
+  background: #183b5b;
+  color: #edf5fc;
 }
 
 .footer-main {
@@ -904,7 +904,7 @@ h1 span {
 .footer-main p {
   max-width: 330px;
   margin-top: 12px;
-  color: #c0cdbf;
+  color: #c3d3e2;
   font-size: 12px;
 }
 
@@ -917,7 +917,7 @@ h1 span {
 .footer-main > div > a:not(.logo) {
   display: block;
   margin: 8px 0;
-  color: #c0cdbf;
+  color: #c3d3e2;
   font-size: 12px;
   transition: color var(--transition);
 }
@@ -931,8 +931,8 @@ h1 span {
   justify-content: space-between;
   gap: 15px;
   padding-top: 17px;
-  border-top: 1px solid #42604d;
-  color: #b7c7b8;
+  border-top: 1px solid #3c5d7c;
+  color: #bed0e1;
   font-size: 10px;
 }
 
@@ -1215,4 +1215,3 @@ h1 span {
     transition-duration: 0.01ms !important;
   }
 }
-

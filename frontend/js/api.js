@@ -2,6 +2,16 @@
   const apiBaseUrl = (window.AAHARLINK_API_URL || "http://127.0.0.1:8000/api")
     .replace(/\/+$/, "");
 
+  function getErrorMessage(data) {
+    if (typeof data === "string") return data;
+    if (typeof data?.detail === "string") return data.detail;
+    if (Array.isArray(data?.detail)) {
+      return data.detail.map(issue => issue.msg).join("; ");
+    }
+
+    return "The request could not be completed.";
+  }
+
   async function apiRequest(path, options = {}) {
     const response = await fetch(`${apiBaseUrl}${path}`, {
       ...options,
@@ -18,14 +28,7 @@
         ? await response.json()
         : await response.text();
     if (!response.ok) {
-      const detail = typeof data === "string"
-        ? data
-        : typeof data?.detail === "string"
-        ? data.detail
-        : Array.isArray(data?.detail)
-          ? data.detail.map(issue => issue.msg).join("; ")
-          : "The request could not be completed.";
-      throw new Error(detail);
+      throw new Error(getErrorMessage(data));
     }
 
     return data;

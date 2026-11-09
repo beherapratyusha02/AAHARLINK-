@@ -74,7 +74,7 @@ if (!currentUser?.id) {
         donations.length;
       document.getElementById("totalMeals").textContent =
         donations.reduce((total, food) => total + Number(food.quantity || 0), 0);
-      document.getElementById("availableListings").textContent =
+      document.getElementById("foodRequests").textContent =
         stats.statistics.food_requests;
       foods = liveFoods;
       dashboardMessage.textContent = "";

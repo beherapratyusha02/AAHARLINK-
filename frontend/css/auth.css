@@ -9,7 +9,7 @@
 .auth-page {
   min-height: 100vh;
   padding: 22px 6%;
-  background: #f5f4ed;
+  background: #f3f7fc;
 }
 
 .auth-logo {
@@ -28,7 +28,7 @@
   grid-template-columns: 1fr 1fr;
   overflow: hidden;
   background: var(--white);
-  border: 1px solid rgba(49, 92, 67, 0.05);
+  border: 1px solid rgba(37, 99, 166, 0.06);
   border-radius: 20px;
   box-shadow: var(--shadow);
 }
@@ -42,7 +42,7 @@
   justify-content: center;
   padding: 55px 45px;
   overflow: hidden;
-  background: #eaf0e3;
+  background: #eaf2fa;
 }
 
 .auth-art::before {
@@ -52,7 +52,7 @@
   height: 250px;
   top: -100px;
   right: -80px;
-  border: 1px solid rgba(49, 92, 67, 0.1);
+  border: 1px solid rgba(37, 99, 166, 0.1);
   border-radius: 50%;
 }
 
@@ -63,7 +63,7 @@
   height: 180px;
   bottom: -90px;
   left: -70px;
-  border: 1px solid rgba(49, 92, 67, 0.1);
+  border: 1px solid rgba(37, 99, 166, 0.1);
   border-radius: 50%;
 }
 
@@ -94,7 +94,7 @@
   position: relative;
   z-index: 1;
   margin-bottom: 25px;
-  color: #687a6b;
+  color: #5e7185;
   font-size: 13px;
   line-height: 1.8;
 }
@@ -183,20 +183,20 @@
 
 .auth-form-wrap input::placeholder,
 .auth-form-wrap textarea::placeholder {
-  color: #a6aea5;
+  color: #9aa9b8;
 }
 
 .auth-form-wrap input:hover,
 .auth-form-wrap select:hover,
 .auth-form-wrap textarea:hover {
-  border-color: #bdcdbb;
+  border-color: #b7cde3;
 }
 
 .auth-form-wrap input:focus,
 .auth-form-wrap select:focus,
 .auth-form-wrap textarea:focus {
   border-color: var(--green);
-  box-shadow: 0 0 0 3px rgba(49, 92, 67, 0.08);
+  box-shadow: 0 0 0 3px rgba(37, 99, 166, 0.1);
   background: #fff;
 }
 
@@ -266,7 +266,7 @@
 }
 
 .auth-form-wrap input:valid:not(:placeholder-shown) {
-  border-color: #a7c5a5;
+  border-color: #a8c9e8;
 }
 
 /* 10. REGISTRATION PAGE */
